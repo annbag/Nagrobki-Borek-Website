@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$brown-color: #453D36;
+$chocolate-color: #453836;
+$color-grey: #36453E;
+$green-color: #00994D;
+.squares {
+    display: flex;
+    width: 480px;
+    
+}
+div {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.brown {
+        background-color: $brown-color;
+    }
+
+    &.chocolate {
+        background-color: $chocolate-color;
+    }
+
+    &.grey {
+        background-color: $color-grey;
+    }
+
+    &.green {
+        background-color: $green-color;
+    }
+}
