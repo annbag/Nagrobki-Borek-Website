@@ -18,7 +18,8 @@ nav {
   right: 0;
   left: 0;
   height: 70px;
-  background-color: #36453E;
+  background-color: #363636;
+  overflow: hidden;
 }
 
 nav .nav-container {
@@ -60,12 +61,12 @@ nav .nav-container .hamburger span {
   position: absolute;
   height: 5px;
   width: 100%;
-  background-color: #00994D;
+  background-color: #00994d;
   border-radius: 6px;
-  -webkit-transition: top .1s .1s, bottom .1s .1s, opacity .1s .1s, -webkit-transform .1s .1s;
-  transition: top .1s .1s, bottom .1s .1s, opacity .1s .1s, -webkit-transform .1s .1s;
-  transition: top .1s .1s, bottom .1s .1s, opacity .1s .1s, transform .1s .1s;
-  transition: top .1s .1s, bottom .1s .1s, opacity .1s .1s, transform .1s .1s, -webkit-transform .1s .1s;
+  -webkit-transition: top 0.1s 0.1s, bottom 0.1s 0.1s, opacity 0.1s 0.1s, -webkit-transform 0.1s 0.1s;
+  transition: top 0.1s 0.1s, bottom 0.1s 0.1s, opacity 0.1s 0.1s, -webkit-transform 0.1s 0.1s;
+  transition: top 0.1s 0.1s, bottom 0.1s 0.1s, opacity 0.1s 0.1s, transform 0.1s 0.1s;
+  transition: top 0.1s 0.1s, bottom 0.1s 0.1s, opacity 0.1s 0.1s, transform 0.1s 0.1s, -webkit-transform 0.1s 0.1s;
 }
 
 nav .nav-container .hamburger span:nth-child(1) {
@@ -144,7 +145,7 @@ nav .nav-container .menu ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  background-color: #36453E;
+  background-color: #363636;
 }
 
 @media (min-width: 1024px) {
@@ -178,11 +179,11 @@ nav .nav-container .menu ul li a {
     position: absolute;
     width: 96%;
     height: 2px;
-    background-color: #00994D;
+    background-color: #00994d;
     bottom: 0;
     left: -100%;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
   nav .nav-container .menu ul li a:hover span {
     left: 2%;
@@ -192,6 +193,7 @@ nav .nav-container .menu ul li a {
 nav .nav-container .menu.active {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  overflow: visible;
 }
 
 .banner {
@@ -214,6 +216,19 @@ nav .nav-container .menu.active {
 
 .banner h1 {
   margin: 30px 0;
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+  .banner h1 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner h1 {
+    font-size: 32px;
+  }
 }
 
 .banner .logo h1 {
@@ -223,10 +238,234 @@ nav .nav-container .menu.active {
 
 .banner :nth-child(3) {
   text-transform: uppercase;
-  font-size: 36px;
+  font-size: 28px;
 }
 
-.main {
-  height: 200vh;
+@media (min-width: 768px) {
+  .banner :nth-child(3) {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner :nth-child(3) {
+    font-size: 36px;
+  }
+}
+
+.title {
+  margin: 15px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 26px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+.about {
+  padding: 30px 0;
+  background-color: #eeeeee;
+}
+
+.about .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .about .description {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about .description .text {
+    padding-right: 50px;
+  }
+}
+
+.about .description .text p {
+  margin: 10px 0;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .about .description .text p {
+    font-size: 16px;
+  }
+}
+
+.about .description .photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 650px) {
+  .about .description .photos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about .description .photos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.about .description .photos img {
+  padding: 10px;
+}
+
+@media (min-width: 650px) {
+  .about .description .photos img {
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about .description .photos img {
+    padding: 10px;
+  }
+}
+
+.advantages {
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages {
+    padding: 50px 0;
+  }
+}
+
+.advantages .advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+.advantages .advantage i {
+  font-size: 40px;
+  margin: 10px;
+  color: #00994d;
+}
+
+@media (min-width: 768px) {
+  .advantages .advantage i {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages .advantage i {
+    font-size: 60px;
+  }
+}
+
+.advantages .advantage p {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .advantages .advantage p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages .advantage p {
+    font-size: 20px;
+  }
+}
+
+footer {
+  background-color: #363636;
+  color: #e6e6e6;
+  text-align: center;
+}
+
+footer p {
+  padding: 15px 0;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
