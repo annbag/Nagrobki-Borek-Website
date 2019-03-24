@@ -9,7 +9,7 @@ $brown-color: #453d36;
 $chocolate-color: #453836;
 // $color-grey: #36453E;
 $color-grey: #363636;
-
+$color-lightgrey: #e6e6e6;
 $color-green: #00994d;
 $color-green-lighter: #00cc66;
 
@@ -41,7 +41,7 @@ nav {
     align-items: center;
 
     .logo {
-      color: #e6e6e6;
+      color: $color-lightgrey;
       text-align: center;
 
       p {
@@ -178,35 +178,41 @@ nav {
   height: calc(100vh - 70px);
   background-image: url(../images/photo.jpeg);
   @include bgImg();
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  h1 {
-    margin: 30px 0;
-    font-size: 24px;
-    @media (min-width: 768px) {
-      font-size: 28px;
-    }
-    @media (min-width: 1024px) {
-      font-size: 32px;
-    }
-  }
-
-  .logo {
+  .banner-container {
+    height: calc(100vh - 70px);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     h1 {
-      font-family: 'Thasadith', sans-serif;
-      margin: 0;
+      margin: 30px 0;
+      font-size: 24px;
+      @media (min-width: 768px) {
+        font-size: 28px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 32px;
+      }
     }
-  }
-  :nth-child(3) {
-    text-transform: uppercase;
-    font-size: 28px;
-    @media (min-width: 768px) {
-      font-size: 32px;
+
+    .logo {
+      h1 {
+        font-family: 'Thasadith', sans-serif;
+        margin: 0;
+        color: $color-lightgrey;
+      }
     }
-    @media (min-width: 1024px) {
-      font-size: 36px;
+    :nth-child(3) {
+      text-transform: uppercase;
+      font-size: 28px;
+      @media (min-width: 768px) {
+        font-size: 32px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 36px;
+      }
     }
   }
 }
@@ -226,7 +232,7 @@ nav {
 
 .about {
   padding: 30px 0;
-  background-color: #eeeeee;
+  background-color: $color-lightgrey;
 
   .description {
     display: flex;
@@ -276,41 +282,43 @@ nav {
 }
 .advantages {
   padding: 30px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  @media (min-width: 1024px) {
-    padding: 50px 0;
-  }
-  .advantage {
+  .advantages-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px 0;
-    i {
-      font-size: 40px;
-      margin: 10px;
-      color: $color-green;
-      @media (min-width: 768px) {
-        font-size: 50px;
-      }
-      @media (min-width: 1024px) {
-        font-size: 60px;
-      }
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
     }
-    p {
-      font-weight: 600;
-      @media (min-width: 768px) {
-        font-size: 18px;
+    @media (min-width: 1024px) {
+      padding: 50px 0;
+    }
+    .advantage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      i {
+        font-size: 40px;
+        margin: 10px;
+        color: $color-green;
+        @media (min-width: 768px) {
+          font-size: 50px;
+        }
+        @media (min-width: 1024px) {
+          font-size: 60px;
+        }
       }
-      @media (min-width: 1024px) {
-        font-size: 20px;
+      p {
+        font-weight: 600;
+        @media (min-width: 768px) {
+          font-size: 18px;
+        }
+        @media (min-width: 1024px) {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -351,7 +359,9 @@ nav {
     rgba(60, 60, 60, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#3c3c3c', GradientType=1 );
-
+  @media (min-width: 1024px) {
+    padding: 50px 0;
+  }
   .content {
     display: flex;
     justify-content: center;
@@ -359,7 +369,7 @@ nav {
     align-items: flex-start;
     font-size: 14px;
     @media (min-width: 768px) {
-        justify-content: space-around;
+      justify-content: space-around;
       font-size: 16px;
     }
     .option {
@@ -368,6 +378,59 @@ nav {
     }
   }
 }
+
+.contact {
+  padding: 30px 0;
+  @media (min-width: 1024px) {
+    padding: 50px 0;
+  }
+  .container {
+    .contact-container {
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+      }
+      .content {        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @media (min-width: 560px) {
+          justify-content: center;
+          align-items: center;
+        }
+        @media(min-width: 768px) {
+            margin: 20px 0;
+        }
+        > div {
+          padding: 15px;
+          @media (min-width: 768px) {
+            padding: 15px 40px;
+          }
+          @media (min-width: 1024px) {
+            padding: 20px 60px;
+          }
+        }
+        h3 {
+          text-decoration: underline;
+          margin: 8px 0;
+          font-size: 16px;
+          @media (min-width: 768p) {
+            margin: 10px 0;
+            font-size: 18px;
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.8;
+          @media (min-width: 768px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
 footer {
   background-color: $color-grey;
   color: #e6e6e6;
