@@ -52,8 +52,8 @@ nav {
 
     .hamburger {
       position: relative;
-      height: 30px;
-      width: 40px;
+      height: 24px;
+      width: 36px;
 
       @media (min-width: 1024px) {
         display: none;
@@ -61,9 +61,9 @@ nav {
 
       span {
         position: absolute;
-        height: 5px;
+        height: 3px;
         width: 100%;
-        background-color: $color-green;
+        background-color: #fff;
         border-radius: 6px;
         transition: top 0.1s 0.1s, bottom 0.1s 0.1s, opacity 0.1s 0.1s,
           transform 0.1s 0.1s;
@@ -126,9 +126,11 @@ nav {
         justify-content: space-between;
         width: 100%;
         background-color: $color-grey;
-
         @media (min-width: 1024px) {
           flex-direction: row;
+          .home {
+            color: $color-green;
+          }
         }
 
         li {
@@ -314,6 +316,58 @@ nav {
   }
 }
 
+.offer {
+  padding: 30px 0;
+  background: rgba(170, 170, 170, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(170, 170, 170, 1) 0%,
+    rgba(60, 60, 60, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(170, 170, 170, 1)),
+    color-stop(100%, rgba(60, 60, 60, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(170, 170, 170, 1) 0%,
+    rgba(60, 60, 60, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(170, 170, 170, 1) 0%,
+    rgba(60, 60, 60, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(170, 170, 170, 1) 0%,
+    rgba(60, 60, 60, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(170, 170, 170, 1) 0%,
+    rgba(60, 60, 60, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#3c3c3c', GradientType=1 );
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 14px;
+    @media (min-width: 768px) {
+        justify-content: space-around;
+      font-size: 16px;
+    }
+    .option {
+      margin: 25px 0;
+      text-align: center;
+    }
+  }
+}
 footer {
   background-color: $color-grey;
   color: #e6e6e6;
@@ -321,5 +375,8 @@ footer {
   p {
     padding: 15px 0;
     font-size: 14px;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
   }
 }

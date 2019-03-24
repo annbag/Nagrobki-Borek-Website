@@ -47,8 +47,8 @@ nav .nav-container .logo p {
 
 nav .nav-container .hamburger {
   position: relative;
-  height: 30px;
-  width: 40px;
+  height: 24px;
+  width: 36px;
 }
 
 @media (min-width: 1024px) {
@@ -59,9 +59,9 @@ nav .nav-container .hamburger {
 
 nav .nav-container .hamburger span {
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
-  background-color: #00994d;
+  background-color: #fff;
   border-radius: 6px;
   -webkit-transition: top 0.1s 0.1s, bottom 0.1s 0.1s, opacity 0.1s 0.1s, -webkit-transform 0.1s 0.1s;
   transition: top 0.1s 0.1s, bottom 0.1s 0.1s, opacity 0.1s 0.1s, -webkit-transform 0.1s 0.1s;
@@ -154,6 +154,9 @@ nav .nav-container .menu ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  nav .nav-container .menu ul .home {
+    color: #00994d;
   }
 }
 
@@ -458,6 +461,42 @@ nav .nav-container .menu.active {
   }
 }
 
+.offer {
+  padding: 30px 0;
+  background: #aaaaaa;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #aaaaaa), color-stop(100%, #3c3c3c));
+  background: linear-gradient(135deg, #aaaaaa 0%, #3c3c3c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#3c3c3c', GradientType=1 );
+}
+
+.offer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .offer .content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 16px;
+  }
+}
+
+.offer .content .option {
+  margin: 25px 0;
+  text-align: center;
+}
+
 footer {
   background-color: #363636;
   color: #e6e6e6;
@@ -467,5 +506,11 @@ footer {
 footer p {
   padding: 15px 0;
   font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  footer p {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
