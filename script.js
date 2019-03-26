@@ -1,6 +1,6 @@
 var hamburger = document.querySelector('.hamburger');
 var menu = document.querySelector('.menu');
-var navbar = document.getElementById('navbar')
+var navbar = document.getElementById('navbar');
 
 hamburger.addEventListener('click', function() {
   this.classList.toggle('active');
