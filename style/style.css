@@ -61,7 +61,7 @@ nav .nav-container .hamburger {
 
 nav .nav-container .hamburger span {
   position: absolute;
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: #fff;
   border-radius: 6px;
@@ -286,7 +286,10 @@ nav .nav-container .menu.active {
 
 .about {
   padding: 30px 0;
-  background-color: #e6e6e6;
+  background: #e6e6e6;
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #e6e6e6), color-stop(35%, white), color-stop(64%, white), color-stop(100%, #e6e6e6));
+  background: linear-gradient(135deg, #e6e6e6 0%, white 35%, white 64%, #e6e6e6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#e6e6e6', GradientType=1 );
 }
 
 .about .description {
@@ -558,8 +561,77 @@ nav .nav-container .menu.active {
   margin: 0 10px;
 }
 
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .counter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .counter {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.counter .number {
+  padding: 20px 0;
+}
+
+@media (min-width: 1024px) {
+  .counter .number {
+    padding: 50px 0;
+  }
+}
+
+.counter .number .counter-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #00994d;
+}
+
+@media (min-width: 1024px) {
+  .counter .number .counter-value {
+    font-size: 36px;
+  }
+}
+
+.counter .number p {
+  font-family: 'Thasadith', sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .counter .number p {
+    font-size: 20px;
+  }
+}
+
 .contact {
   padding: 30px 0;
+  background-color: #e6e6e6;
 }
 
 @media (min-width: 1024px) {

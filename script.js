@@ -1,15 +1,16 @@
 var hamburger = document.querySelector('.hamburger');
 var menu = document.querySelector('.menu');
 var navbar = document.getElementById('navbar');
+var counter = document.getElementById('counter');
 
-hamburger.addEventListener('click', function() {
+hamburger.addEventListener('click', function () {
   this.classList.toggle('active');
   menu.classList.toggle('active');
 });
 
 //hide nav
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     navbar.style.top = '0';
@@ -18,6 +19,38 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
+
+//number counter
+var a = 0;
+$(window).scroll(function () {
+
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function () {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          }
+
+        });
+    });
+    a = 1;
+  }
+
+});
 
 //add map
 function initMap() {
