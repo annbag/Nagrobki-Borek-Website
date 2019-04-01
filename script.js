@@ -19,6 +19,27 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+// arrow
+$(document).ready(function() {
+	$('a.arrow').hide();
+
+	$(function() {
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				$('a.arrow').fadeIn();
+			} else {
+				$('a.arrow').fadeOut();
+			}
+		});
+
+		$('a.arrow').click(function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1000);
+			return false;
+		});
+	});
+});
 
 //number counter
 var a = 0;

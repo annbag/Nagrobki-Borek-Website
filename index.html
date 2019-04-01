@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Lokalizacja: Borek, Hajnówka, podlaskie, Właściciel: Maciuka, Profesja: pomniki, nagrobki"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Nagrobki Borek | Włodzimierz Maciuka</title>
     <link
@@ -12,7 +16,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Thasadith&amp;subset=latin-ext"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Thasadith&amp;subset=latin-ext"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/style.css" />
@@ -31,21 +35,21 @@
           <span></span>
         </div>
         <div class="menu">
-          <ul>
-            <li>
-              <a href="" class="home">home <span></span></a>
+          <ul class="list">
+            <li class="list-item">
+              <a href="" class="list-link home">home <span class="line"></span></a>
             </li>
-            <li>
-              <a href="">o nas<span></span></a>
+            <li class="list-item">
+              <a href="" class="list-link">o nas<span class="line"></span></a>
             </li>
-            <li>
-              <a href="">oferta <span></span></a>
+            <li class="list-item">
+              <a href="" class="list-link">oferta <span class="line"></span></a>
             </li>
-            <li>
-              <a href="">realizacje <span></span></a>
+            <li class="list-item">
+              <a href="" class="list-link">realizacje <span class="line"></span></a>
             </li>
-            <li>
-              <a href="">kontakt <span></span></a>
+            <li class="list-item">
+              <a href="" class="list-link">kontakt <span class="line"></span></a>
             </li>
           </ul>
         </div>
@@ -55,19 +59,24 @@
     <div class="banner">
       <div class="banner-container">
         <div class="text">
-          <h1>Zakład kamieniarski</h1>
-          <div class="logo">
-            <h1 class="logo">Nagrobki Borek</h1>
-            <h1 class="logo">Włodzimierz Maciuka</h1>
+          <h1 class="headline">Zakład kamieniarski</h1>
+          <div>
+            <p class="logo">Nagrobki Borek</p>
+            <p class="logo">Włodzimierz Maciuka</p>
           </div>
-          <h1>zawsze najwyższa jakość!</h1>
+          <h2>zawsze najwyższa jakość!</h2>
         </div>
+        
+          <a href="#" class="arrow">
+            <i class="fas fa-chevron-circle-up icon"></i>
+          </a>
+        
       </div>
     </div>
 
     <div class="about">
       <div class="container">
-        <h1 class="title">o nas</h1>
+        <h2 class="title">o nas</h2>
         <div class="description">
           <div class="text">
             <p>
@@ -101,8 +110,14 @@
             </p>
           </div>
           <div class="photos">
-            <img src=" https://via.placeholder.com/280x200?text=workplace" />
-            <img src=" https://via.placeholder.com/280x200?text=workplace" />
+            <img class="photo"
+              src=" https://via.placeholder.com/280x200?text=workplace"
+              alt="miejsce pracy"
+            />
+            <img class="photo"
+              src=" https://via.placeholder.com/280x200?text=workplace"
+              alt="miejsce pracy"
+            />
           </div>
         </div>
       </div>
@@ -110,16 +125,16 @@
     <div class="advantages">
       <div class="advantages-container container">
         <div class="advantage">
-          <i class="fas fa-people-carry"></i>
+          <i class="fas fa-people-carry icon"></i>
           <p>Profesjonalizm</p>
         </div>
         <div class="advantage">
-          <i class="far fa-calendar-alt"></i>
+          <i class="far fa-calendar-alt icon"></i>
           <p>Terminowe wykonanie</p>
         </div>
 
         <div class="advantage">
-          <i class="far fa-handshake"></i>
+          <i class="far fa-handshake icon"></i>
           <p>Zaufanie klientów</p>
         </div>
       </div>
@@ -127,7 +142,7 @@
 
     <div class="offer">
       <div class="container">
-        <h1 class="title">oferta</h1>
+        <h2 class="title">oferta</h2>
         <p class="text">
           Wykonujemy nagrobki pojedyncze, podwójne, potrójne a także więcej
           osobowe. Oferujemy również dodatki tj. flakony i podstawki na znicze.
@@ -203,7 +218,7 @@
     </div>
     <div class="contact">
       <div class="container">
-        <h1 class="title">kontakt</h1>
+        <h2 class="title">kontakt</h2>
         <div class="content">
           <div class="map">
             <div id="map"></div>
