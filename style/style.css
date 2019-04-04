@@ -19,6 +19,7 @@ nav {
   left: 0;
   height: 70px;
   background-color: #363636;
+  z-index: 2;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
@@ -200,18 +201,18 @@ nav .nav-container .menu.active {
   overflow: visible;
 }
 
-.banner {
-  height: calc(100vh - 70px);
+.welcome {
+  height: calc(100vh);
   background-image: url(../images/photo.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.banner .banner-container {
+.welcome .welcome-container {
   position: relative;
   top: 70px;
-  height: calc(100vh - 70px * 2);
+  height: calc(100vh - 70px);
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   display: -webkit-box;
@@ -226,54 +227,54 @@ nav .nav-container .menu.active {
   text-align: center;
 }
 
-.banner .banner-container .headline {
+.welcome .welcome-container .headline {
   margin: 20px 0;
   font-size: 24px;
 }
 
 @media (min-width: 768px) {
-  .banner .banner-container .headline {
+  .welcome .welcome-container .headline {
     font-size: 28px;
   }
 }
 
 @media (min-width: 1024px) {
-  .banner .banner-container .headline {
+  .welcome .welcome-container .headline {
     font-size: 32px;
   }
 }
 
-.banner .banner-container .logo {
+.welcome .welcome-container .logo {
   font-family: 'Thasadith', sans-serif;
   margin: 0;
   color: #e6e6e6;
 }
 
 @media (min-width: 1024px) {
-  .banner .banner-container .logo {
+  .welcome .welcome-container .logo {
     font-size: 28px;
   }
 }
 
-.banner .banner-container :nth-child(3) {
+.welcome .welcome-container :nth-child(3) {
   margin: 20px 0;
   text-transform: uppercase;
   font-size: 28px;
 }
 
 @media (min-width: 768px) {
-  .banner .banner-container :nth-child(3) {
+  .welcome .welcome-container :nth-child(3) {
     font-size: 32px;
   }
 }
 
 @media (min-width: 1024px) {
-  .banner .banner-container :nth-child(3) {
+  .welcome .welcome-container :nth-child(3) {
     font-size: 36px;
   }
 }
 
-.banner .banner-container .arrow {
+.welcome .welcome-container .arrow {
   position: fixed;
   z-index: 1;
   right: 10px;
@@ -283,22 +284,22 @@ nav .nav-container .menu.active {
 }
 
 @media (min-width: 768px) {
-  .banner .banner-container .arrow {
+  .welcome .welcome-container .arrow {
     right: 20px;
     bottom: 10px;
   }
 }
 
 @media (min-width: 1024px) {
-  .banner .banner-container .arrow {
+  .welcome .welcome-container .arrow {
     font-size: 40px;
   }
-  .banner .banner-container .arrow:hover {
+  .welcome .welcome-container .arrow:hover {
     color: rgba(170, 170, 170, 0.9);
   }
 }
 
-.banner .banner-container .arrow .icon {
+.welcome .welcome-container .arrow .icon {
   border: 2px solid #e6e6e6;
   border-radius: 50%;
   background-color: #e6e6e6;
