@@ -21,29 +21,34 @@ window.onscroll = function () {
 };
 //nav
 $('.home').on('click', function () {
-	$('body, html').animate({
-		scrollTop: $('.welcome').offset().top
-	}, 500)
+    $('body, html').animate({
+        scrollTop: $('.welcome').offset().top
+    }, 500);
+    $('.menu, .hamburger').removeClass('active');
 })
 $('.btn-2').on('click', function () {
-	$('body, html').animate({
-		scrollTop: $('.about').offset().top
-	}, 500)
+    $('body, html').animate({
+        scrollTop: $('.about').offset().top
+    }, 500);
+    $('.menu, .hamburger').removeClass('active');
 })
 $('.btn-3').on('click', function () {
-	$('body, html').animate({
-		scrollTop: $('.offer').offset().top
-	}, 500)
+    $('body, html').animate({
+        scrollTop: $('.offer').offset().top
+    }, 500);
+    $('.menu, .hamburger').removeClass('active');
 })
 $('.btn-4').on('click', function () {
-	$('body, html').animate({
-		scrollTop: $('.offer').offset().top
-	}, 500)
+    $('body, html').animate({
+        scrollTop: $('.offer').offset().top
+    }, 500);
+    $('.menu, .hamburger').removeClass('active');
 })
 $('.btn-5').on('click', function () {
-	$('body, html').animate({
-		scrollTop: $('.contact').offset().top
-	}, 500)
+    $('body, html').animate({
+        scrollTop: $('.contact').offset().top
+    }, 500);
+    $('.menu, .hamburger').removeClass('active');
 })
 // arrow
 $(document).ready(function () {
