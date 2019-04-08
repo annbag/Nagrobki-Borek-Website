@@ -52,18 +52,18 @@ $('.btn-5').on('click', function () {
 })
 // arrow
 $(document).ready(function () {
-    $('a.arrow').hide();
+    $('.arrow').hide();
 
     $(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
-                $('a.arrow').fadeIn();
+                $('.arrow').fadeIn();
             } else {
-                $('a.arrow').fadeOut();
+                $('.arrow').fadeOut();
             }
         });
 
-        $('a.arrow').click(function () {
+        $('.arrow').click(function () {
             $('html, body').animate({
                 scrollTop: 0
             }, 1000);

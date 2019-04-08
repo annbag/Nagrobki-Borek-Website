@@ -210,9 +210,7 @@ nav .nav-container .menu.active {
 }
 
 .welcome .welcome-container {
-  position: relative;
-  top: 70px;
-  height: calc(100vh - 70px);
+  height: calc(100vh);
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   display: -webkit-box;
@@ -276,11 +274,47 @@ nav .nav-container .menu.active {
 
 .welcome .welcome-container .arrow {
   position: fixed;
-  z-index: 1;
+  z-index: 99;
   right: 10px;
   bottom: 10px;
-  color: rgba(170, 170, 170, 0.7);
-  font-size: 30px;
+  background-color: rgba(100, 100, 100, 0.4);
+  font-size: 40px;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  -webkit-transition: 250ms linear;
+  transition: 250ms linear;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.welcome .welcome-container .arrow:before {
+  content: '';
+  position: absolute;
+  display: block;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: rotate(-45deg) translate(-20%, -50%);
+          transform: rotate(-45deg) translate(-20%, -50%);
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  width: 15px;
+  height: 15px;
+}
+
+@media (min-width: 1024px) {
+  .welcome .welcome-container .arrow:before {
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+  }
 }
 
 @media (min-width: 768px) {
@@ -292,17 +326,13 @@ nav .nav-container .menu.active {
 
 @media (min-width: 1024px) {
   .welcome .welcome-container .arrow {
-    font-size: 40px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
   }
   .welcome .welcome-container .arrow:hover {
-    color: rgba(170, 170, 170, 0.9);
+    background-color: rgba(100, 100, 100, 0.6);
   }
-}
-
-.welcome .welcome-container .arrow .icon {
-  border: 2px solid #e6e6e6;
-  border-radius: 50%;
-  background-color: #e6e6e6;
 }
 
 .title {
@@ -329,7 +359,7 @@ nav .nav-container .menu.active {
   background: #e6e6e6;
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #e6e6e6), color-stop(35%, white), color-stop(64%, white), color-stop(100%, #e6e6e6));
   background: linear-gradient(135deg, #e6e6e6 0%, white 35%, white 64%, #e6e6e6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#e6e6e6', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6e6e6', endColorstr='#e6e6e6', GradientType=1);
 }
 
 .about .description {
@@ -521,7 +551,7 @@ nav .nav-container .menu.active {
   background: #aaaaaa;
   background: -webkit-gradient(left top, right bottom, color-stop(0%, #aaaaaa), color-stop(100%, #3c3c3c));
   background: linear-gradient(135deg, #aaaaaa 0%, #3c3c3c 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#3c3c3c', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aaaaaa', endColorstr='#3c3c3c', GradientType=1);
 }
 
 @media (min-width: 1024px) {
