@@ -105,7 +105,7 @@ function initMap() {
         lng: 23.504038
     };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
+        zoom: 12,
         center: place
     });
     var marker = new google.maps.Marker({
