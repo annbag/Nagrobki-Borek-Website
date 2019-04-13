@@ -40,12 +40,6 @@ $('.btn-3').on('click', function () {
 })
 $('.btn-4').on('click', function () {
     $('body, html').animate({
-        scrollTop: $('.offer').offset().top
-    }, 500);
-    $('.menu, .hamburger').removeClass('active');
-})
-$('.btn-5').on('click', function () {
-    $('body, html').animate({
         scrollTop: $('.contact').offset().top
     }, 500);
     $('.menu, .hamburger').removeClass('active');
